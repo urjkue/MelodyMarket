@@ -5,7 +5,7 @@
 
 
 <h1>hello</h1>
-<a href="#">
+
 <%
 =begin%>
  <ul>
@@ -31,6 +31,7 @@
 <%
 =end%>
       <div class="card-product">
+      <a href="<%= instrument_path(i) %>">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
     <div class="card-product-infos">
       <h2><%= i.name%></h2>
@@ -39,10 +40,13 @@
   </div>
   <p> </p>
     <% elsif i.category == "Wind Instruments" %>
+    <a href="<%= instrument_path(i) %>">
       <h1 class="wind-instruments"><%= i.name %></h1>
     <% elsif i.category == "Percussion Instruments" %>
+    <a href="<%= instrument_path(i) %>">
       <h1 class="percussion-instruments"><%= i.name %></h1>
     <% elsif i.category == "Keyboard Instruments" %>
+    <a href="<%= instrument_path(i) %>">
       <h1 class="keyboard-instruments"><%= i.name %></h1>
     <% end %>
   <% end %>
