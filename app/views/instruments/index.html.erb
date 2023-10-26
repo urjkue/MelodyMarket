@@ -1,2 +1,8 @@
 <h1>hello</h1>
-<%= @instrument= Instrument.all  %>
+<a href="#">
+<ul>
+  <% @instrument.each do |i| %>
+    <li><%= i.name %></li>
+  <% end %>
+</ul>
+</a>
