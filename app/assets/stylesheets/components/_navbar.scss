@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+ background: rgb(48, 47, 47);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +9,7 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+.navbar-lewagon .nav-link {
+  color: #ffffff; /* Change this to your desired text color, e.g., red (#ff0000) */
 }
