@@ -1,29 +1,35 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
 # db/seeds.rb
+
+# Instrument Categories and Names
+instrument_categories = {
+  'String Instruments' => ['Violin', 'Guitar', 'Electric Guitar', 'Bass Guitar', 'Harp'],
+  'Wind Instruments' => ['Flute', 'Saxophone', 'Trumpet', 'Clarinet', 'Oboe'],
+  'Percussion Instruments' => ['Drum Kit', 'Bongos', 'Xylophone', 'Djembe', 'Tambourine'],
+  'Keyboard Instruments' => ['Piano', 'Organ', 'Synthesizer', 'Electric Keyboard', 'Accordion']
+}
+
 # Create Users
 users = []
 10.times do |i|
   users << User.create(email: "user#{i + 1}@example.com", password: 'password')
 end
-# Create Instruments with Category
-categories = ['String', 'Wind', 'Percussion', 'Brass', 'Electronic']  # Add more categories as needed
+
+# Create Instruments with Category and Name
 instruments = []
-users.each do |user|
-  10.times do
-    instruments << Instrument.create(
-      price: rand(50..300),
-      location: Faker::Address.city,
-      category: categories.sample,
-      user: user
-    )
+instrument_categories.each do |category, names|
+  names.each do |name|
+    users.each do |user|
+      instruments << Instrument.create(
+        price: rand(30..99),
+        location: Faker::Address.city,
+        category: category,
+        name: name,
+        user: user
+      )
+    end
   end
 end
+
 # Create Reviews
 instruments.each do |instrument|
   10.times do
@@ -34,6 +40,7 @@ instruments.each do |instrument|
     )
   end
 end
+
 # Create Bookings
 users.each do |user|
   10.times do
