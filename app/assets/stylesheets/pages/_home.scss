@@ -1,4 +1,11 @@
 // Specific CSS for your home-page
+
+
+
+body {
+  background-color: rgb(48, 47, 47);
+}
+
 .banner {
   background-size: cover;
   background-position: center;
@@ -18,4 +25,41 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+#btn_catalog{
+  width: 100px;
+  height:40px;
+  outline: solid rgb(66, 43, 43);
+  color: white;
+  border-radius: 15%;
+}
+.footer {
+  background-color:rgb(48, 47, 47);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: rgb(224, 217, 217);
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
+}
+.footer-copyright{
+  color: white;
 }

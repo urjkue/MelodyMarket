@@ -1,0 +1,9 @@
+<h2><%= @ins.name %></h2>
+
+<h3>Reviews for <%= @ins.name %></h3>
+<ul>
+  <% @reviews.each do |review| %>
+    <li><%= review.comment %></li> <!-- Assuming 'comment' is the attribute where review text is stored -->
+    <li>Rating: <%= review.rating %></li> <!-- Assuming 'rating' is the attribute where review rating is stored -->
+  <% end %>
+</ul>

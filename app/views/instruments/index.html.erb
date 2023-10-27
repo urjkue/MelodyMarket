@@ -1,8 +1,55 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  Browse
+</div>
+
+
+
 <h1>hello</h1>
-<a href="#">
-<ul>
+
+<%
+=begin%>
+ <ul>
   <% @instrument.each do |i| %>
-    <li><%= i.name %></li>
+   <h1 clas="String Instruments"> <%
+    if(.category =="String Instruments") {
+      i.name
+    }
+    %></h1>
+
+
   <% end %>
 </ul>
+<%
+=end%>
+
+<ul>
+  <% @instrument.each do |i| %>
+    <% if i.category == "String Instruments" %>
+      <%
+=begin%>
+ <h3 class="string-instruments"><%= i.name %></h3>
+<%
+=end%>
+      <div class="card-product">
+      <a href="<%= instrument_path(i) %>">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2><%= i.name%></h2>
+      <p><%= i.category%></p>
+    </div>
+  </div>
+  <p> </p>
+    <% elsif i.category == "Wind Instruments" %>
+    <a href="<%= instrument_path(i) %>">
+      <h1 class="wind-instruments"><%= i.name %></h1>
+    <% elsif i.category == "Percussion Instruments" %>
+    <a href="<%= instrument_path(i) %>">
+      <h1 class="percussion-instruments"><%= i.name %></h1>
+    <% elsif i.category == "Keyboard Instruments" %>
+    <a href="<%= instrument_path(i) %>">
+      <h1 class="keyboard-instruments"><%= i.name %></h1>
+    <% end %>
+  <% end %>
+</ul>
+
 </a>
