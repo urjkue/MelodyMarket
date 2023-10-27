@@ -9,7 +9,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 150px;
 }
 
 .banner h1 {
@@ -33,4 +33,31 @@
   outline: solid rgb(66, 43, 43);
   color: white;
   border-radius: 15%;
+}
+
+
+
+.instrument-section {
+  display: inline-block;
+  margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.instrument-content {
+  position: relative;
+  text-align: center;
+}
+
+.instrument-image {
+  width: 200px; /* Set the width of the images */
+}
+
+.instrument-text {
+  position: absolute;
+  bottom: 10px; /* Adjust the distance from the bottom as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  font-size: 18px;
 }
