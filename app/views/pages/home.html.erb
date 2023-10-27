@@ -4,34 +4,38 @@
     <a class="btn btn-flat" id="btn_catalog"  href="/catalogue">Browse</a>
   </div>
 </div>
-<%= link_to "Some Page", cateinstrument_path("String Instruments") %>
+<%= link_to "string", cateinstrument_path("String Instruments") %>
 <div class="instrument-section">
   <div class="instrument-content">
     <img class="instrument-image" src="<%= asset_path('Instruments/Guitar/brent-ninaber-C8gib_msapY-unsplash.jpg') %>" alt="String Instruments Image">
-    <div class="instrument-text">String Instruments</div>
+    <div class="instrument-text"><%= "String Instruments" %></div>
   </div>
 </div>
 
- <div class="instrument-section">
+<%= link_to "wind", cateinstrument_path("Wind Instruments") %>
+<div class="instrument-section">
   <div class="instrument-content">
     <img class="instrument-image" src="<%= asset_path('Instruments/Saxophone/konstantin-aal-Otx5FHbr3OE-unsplash.jpg') %>" alt="Wind Instruments Image">
-    <div class="instrument-text">Wind Instruments</div>
+    <div class="instrument-text"><%= "Wind Instruments" %></div>
   </div>
 </div>
 
+<%= link_to "percussion", cateinstrument_path("Percussion Instruments") %>
 <div class="instrument-section">
   <div class="instrument-content">
     <img class="instrument-image" src="<%= asset_path('Instruments/Batteries/david-martin-6NpYOFB3VCI-unsplash.jpg') %>" alt="Percussion Instruments Image">
-    <div class="instrument-text">Percussion Instruments</div>
+    <div class="instrument-text"><%= "Percussion Instruments" %></div>
   </div>
 </div>
 
+<%= link_to "keyboard", cateinstrument_path("Keyboard Instruments") %>
 <div class="instrument-section">
   <div class="instrument-content">
     <img class="instrument-image" src="<%= asset_path('Instruments/Piano/jason-isaac-wKAOlN4A644-unsplash.jpg') %>" alt="Keyboard Instruments Image">
-    <div class="instrument-text">Keyboard Instruments</div>
+    <div class="instrument-text"><%= "Keyboard Instruments" %></div>
   </div>
 </div>
+
 
 
 
