@@ -21,7 +21,9 @@ class InstrumentsController < ApplicationController
 
   def destroy
   end
-  def cate
+  def category
     @instru = Instrument.where(category: params[:category])
+  end
+  def instrument
   end
 end
