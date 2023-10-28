@@ -1,43 +1,22 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path('Instruments/Saxophone/jens-thekkeveettil-dBWvUqBoOU8-unsplash.jpg') %>'); margin-top:-4rem;">
   <div class="container">
     <h1>Rent your dream instrument. </h1>
-    <a class="btn btn-flat" id="btn_catalog"  href="/catalogue">Browse</a>
-  </div>
-</div>
-<%= link_to "string", cateinstrument_path("String Instruments") %>
-<div class="instrument-section">
-  <div class="instrument-content">
-    <img class="instrument-image" src="<%= asset_path('Instruments/Guitar/brent-ninaber-C8gib_msapY-unsplash.jpg') %>" alt="String Instruments Image">
-    <div class="instrument-text"><%= "String Instruments" %></div>
+    <div class="banner-button">
+      <a href="/catalogue">Choose an intrument ></a>
+    </div>
   </div>
 </div>
 
-<%= link_to "wind", cateinstrument_path("Wind Instruments") %>
-<div class="instrument-section">
-  <div class="instrument-content">
-    <img class="instrument-image" src="<%= asset_path('Instruments/Saxophone/konstantin-aal-Otx5FHbr3OE-unsplash.jpg') %>" alt="Wind Instruments Image">
-    <div class="instrument-text"><%= "Wind Instruments" %></div>
-  </div>
+<div class="popular-instruments">
+  <h2 class="secondary-title"> Popular instruments </h2>
+    <div class="container-popular-instrument">
+      <div class="main-photo"> <%= image_tag "Instruments/Piano/Piano1.jpg", width: 439, height: 409, crop: :fill%></div>
+      <div class="small1"> <%= image_tag "Instruments/Piano/Piano1.jpg", width: 211, height: 204, crop: :fill%></div>
+      <div class="small2"> <%= image_tag "Instruments/Piano/Piano1.jpg", width: 211, height: 204, crop: :fill%></div>
+      <div class="small3"> <%= image_tag "Instruments/Piano/Piano1.jpg", width: 211, height: 204, crop: :fill%></div>
+      <div class="small4"> <%= image_tag "Instruments/Piano/Piano1.jpg", width: 211, height: 204, crop: :fill%></div>
+    </div>
 </div>
-
-<%= link_to "percussion", cateinstrument_path("Percussion Instruments") %>
-<div class="instrument-section">
-  <div class="instrument-content">
-    <img class="instrument-image" src="<%= asset_path('Instruments/Batteries/david-martin-6NpYOFB3VCI-unsplash.jpg') %>" alt="Percussion Instruments Image">
-    <div class="instrument-text"><%= "Percussion Instruments" %></div>
-  </div>
-</div>
-
-<%= link_to "keyboard", cateinstrument_path("Keyboard Instruments") %>
-<div class="instrument-section">
-  <div class="instrument-content">
-    <img class="instrument-image" src="<%= asset_path('Instruments/Piano/jason-isaac-wKAOlN4A644-unsplash.jpg') %>" alt="Keyboard Instruments Image">
-    <div class="instrument-text"><%= "Keyboard Instruments" %></div>
-  </div>
-</div>
-
-
-
 
 
 
