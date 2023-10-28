@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  get "/catalogue", to: "instruments#index"
-  get "instrument/:id", to: "instruments#show",as:"instrument"
-  get "/brows/:category", to: "instruments#cate",as:"cateinstrument"
+  get "/catalogue", to: "pages#index"
+  get "instrument/:id", to: "pages#show",as:"instrument"
+  get "/products/:category", to: "pages#category",as:"cateinstrument"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

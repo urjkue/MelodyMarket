@@ -1,14 +1,13 @@
 class InstrumentsController < ApplicationController
+  # before_action :authenticate_user!, only: :home
   def index
     @instruments = Instrument.all
   end
 
-  def show
     def show
       @ins = Instrument.find(params[:id])
       @reviews = Review.where(instrument_id: @ins.id)
     end
-  end
 
   def new
   end
@@ -21,7 +20,9 @@ class InstrumentsController < ApplicationController
 
   def destroy
   end
-  def cate
+  def category
     @instru = Instrument.where(category: params[:category])
+  end
+  def instrument
   end
 end
