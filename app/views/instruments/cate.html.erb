@@ -1,0 +1,11 @@
+
+
+
+<% @instru.each do |i| %>
+  <div class="instrument-box">
+   <a href="<%= instrument_path(i) %>">
+    <strong>Name:</strong> <%= i.name %><br>
+    <strong>Category:</strong> <%= i.category %><br>
+    <!-- Add more instrument details as needed -->
+  </div>
+<% end %>

@@ -1,6 +1,6 @@
 class InstrumentsController < ApplicationController
   def index
-    @instrument = Instrument.all
+    @instruments = Instrument.all
   end
 
   def show
@@ -20,5 +20,8 @@ class InstrumentsController < ApplicationController
   end
 
   def destroy
+  end
+  def cate
+    @instru = Instrument.where(category: params[:category])
   end
 end

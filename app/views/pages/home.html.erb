@@ -1,10 +1,48 @@
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path('Instruments/Saxophone/jens-thekkeveettil-dBWvUqBoOU8-unsplash.jpg') %>');">
   <div class="container">
     <h1>Rent your dream instrument. </h1>
-    <a class="btn btn-flat" id="btn_catalog"  href="/catalogue">Choose an instrument</a>
+    <a class="btn btn-flat" id="btn_catalog"  href="/catalogue">Browse</a>
   </div>
 </div>
+<%= link_to "string", cateinstrument_path("String Instruments") %>
+<div class="instrument-section">
+  <div class="instrument-content">
+    <img class="instrument-image" src="<%= asset_path('Instruments/Guitar/brent-ninaber-C8gib_msapY-unsplash.jpg') %>" alt="String Instruments Image">
+    <div class="instrument-text"><%= "String Instruments" %></div>
+  </div>
+</div>
+
+<%= link_to "wind", cateinstrument_path("Wind Instruments") %>
+<div class="instrument-section">
+  <div class="instrument-content">
+    <img class="instrument-image" src="<%= asset_path('Instruments/Saxophone/konstantin-aal-Otx5FHbr3OE-unsplash.jpg') %>" alt="Wind Instruments Image">
+    <div class="instrument-text"><%= "Wind Instruments" %></div>
+  </div>
+</div>
+
+<%= link_to "percussion", cateinstrument_path("Percussion Instruments") %>
+<div class="instrument-section">
+  <div class="instrument-content">
+    <img class="instrument-image" src="<%= asset_path('Instruments/Batteries/david-martin-6NpYOFB3VCI-unsplash.jpg') %>" alt="Percussion Instruments Image">
+    <div class="instrument-text"><%= "Percussion Instruments" %></div>
+  </div>
+</div>
+
+<%= link_to "keyboard", cateinstrument_path("Keyboard Instruments") %>
+<div class="instrument-section">
+  <div class="instrument-content">
+    <img class="instrument-image" src="<%= asset_path('Instruments/Piano/jason-isaac-wKAOlN4A644-unsplash.jpg') %>" alt="Keyboard Instruments Image">
+    <div class="instrument-text"><%= "Keyboard Instruments" %></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
 
 
 
