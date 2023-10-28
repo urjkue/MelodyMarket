@@ -1,9 +1,53 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path('Instruments/Saxophone/jens-thekkeveettil-dBWvUqBoOU8-unsplash (1).jpg') %>'); margin-top:-4rem;">
   <div class="container">
     <h1>Rent your dream instrument. </h1>
-    <div class="banner-button">
-      <a href="/catalogue">Choose an intrument ></a>
+    <a class="btn btn-flat" id="btn_catalog"  href="/catalogue">Browse</a>
+  </div>
+</div>
+
+<div class=“popular-instruments”>
+  <h2 class=“secondary-title”> Popular instruments </h2>
+  <div class="img-container">
+    <div class="row">
+      <div class="column">
+        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+        <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+      </div>
     </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<%
+=begin%>
+ <%= link_to "string", cateinstrument_path("String Instruments") %>
+<div class="instrument-section">
+  <div class="instrument-content">
+    <img class="instrument-image" src="<%= asset_path('Instruments/Guitar/brent-ninaber-C8gib_msapY-unsplash.jpg') %>" alt="String Instruments Image">
+    <div class="instrument-text"><%= "String Instruments" %></div>
   </div>
 </div>
 
@@ -17,6 +61,9 @@
       <div class="small4 foto"> <%= image_tag "Instruments/Piano/Piano1.jpg"%></div>
     </div>
 </div>
+
+
+
 
 
 
