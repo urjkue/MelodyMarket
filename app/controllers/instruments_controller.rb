@@ -1,6 +1,6 @@
 class InstrumentsController < ApplicationController
+  # before_action :authenticate_user!, only: :home
   def index
-    @user = current_user
     @instruments = Instrument.all
   end
 
