@@ -1,5 +1,6 @@
 class InstrumentsController < ApplicationController
   def index
+    @user = current_user
     @instruments = Instrument.all
   end
 
