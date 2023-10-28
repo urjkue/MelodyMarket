@@ -55,3 +55,23 @@ color: red;
 .card-product .card-product-infos {
   padding: 16px;
 }
+
+.catagloue-links-container {
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.catagloue-links-container > .single-link {
+  padding: .3rem .8rem;
+  border: 1px solid snow;
+  border-color: snow !important;
+  border-radius: 1.5rem;
+}
+
+.single-link > a {
+  text-decoration: none;
+  color: snow;
+}
