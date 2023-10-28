@@ -1,10 +1,7 @@
 
+<h1>Explore instruments</h1>
 
 
-
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-  Browse
-</div>
 
 <div class="catagloue-links-container">
   <div class="single-link">
@@ -20,7 +17,7 @@
     <%= link_to "Saxophone", "#" %>
   </div>
   <div class="single-link">
-    <%= link_to "Vilolin", "#" %>
+    <%= link_to "Violin", "#" %>
   </div>
 </div>
 <%
@@ -47,7 +44,9 @@
   <% @instruments.each do |i| %>
     <% if i.category == "String Instruments" %>
      <% if(s == true)%>
+     <div class="secondary-title">
         <%=i.category%>
+        </div>
         <%s = false%>
      <%end%>
       <div class="card-product">
@@ -61,7 +60,9 @@
       </div>
     <% elsif i.category == "Wind Instruments" %>
     <% if(w== true)%>
+        <div class="secondary-title">
         <%=i.category%>
+        </div>
         <%w = false%>
      <%end%>
       <div class="card-product">
@@ -75,7 +76,9 @@
       </div>
     <% elsif i.category == "Percussion Instruments" %>
      <% if(pe== true)%>
+       <div class="secondary-title">
         <%=i.category%>
+        </div>
         <%pe = false%>
      <%end%>
       <div class="card-product">
@@ -89,7 +92,9 @@
       </div>
     <% elsif i.category == "Keyboard Instruments" %>
       <% if(k== true)%>
+        <div class="secondary-title">
         <%=i.category%>
+        </div>
         <%k = false%>
      <%end%>
       <div class="card-product">
@@ -97,7 +102,9 @@
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
           <div class="card-product-infos">
             <h2 class="keyboard-instruments"><%= i.name %></h2>
-            <p><%= i.category %></p>
+            <div class="secondary-title">
+        <%=i.category%>
+        </div>
           </div>
         </a>
       </div>

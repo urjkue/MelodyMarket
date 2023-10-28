@@ -35,7 +35,8 @@
   }
 }
 
-.container-popular-instrument > secondary-title {
+.container-popular-instrument {
+  width: 80%;
   margin-left: 2rem;
   margin-block: 2rem;
   color: snow;
@@ -43,7 +44,6 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
-  grid-auto-flow: row;
   grid-template-areas:
     "main-photo main-photo Small1 Small2"
     "main-photo main-photo Small3 Small4";
@@ -55,6 +55,15 @@
 .Small3 { grid-area: small3; }
 .Small4 { grid-area: small4; }
 
+.main-photo > img {
+  max-width: 560px;
+  height: 400px;
+}
+
+.foto > img {
+  max-width: 230px;
+  height: 200px;
+}
 // #btn_catalog{
 //   width: 100px;
 //   height:40px;
