@@ -1,9 +1,28 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "pages#home"
-  get "/catalogue", to: "instruments#index"
-  get "instrument/:id", to: "instruments#show",as:"instrument"
-  get "/brows/:category", to: "instruments#cate",as:"cateinstrument"
+
+
+
+
+      root to: "pages#home"
+      get "/catalogue", to: "instruments#index"
+      get "/product/:id", to: "instruments#show",as:"instrument"
+      get "/category/:category", to: "instruments#category",as:"cateinstrument"
+      get "/instrument/:name", to: "instruments#instrument", as:"instruinstrument"
+
+
+
+
+
+
+  # devise_scope :user do
+  #   authenticated :user do
+  #     root "cars#index", as: :authenticated_root
+  #   end
+  #   unauthenticated do
+  #     root "pages#home", as: :unauthenticated_root
+  #   end
+  # end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

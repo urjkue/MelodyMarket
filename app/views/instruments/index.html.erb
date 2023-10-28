@@ -1,3 +1,7 @@
+
+
+
+
 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
   Browse
 </div>
@@ -19,7 +23,6 @@
     <%= link_to "Vilolin", "#" %>
   </div>
 </div>
-
 <%
 =begin%>
  <ul>
@@ -37,8 +40,16 @@
 =end%>
 
 <ul>
+<%s =   true%>
+<%w =   true%>
+<%pe =   true%>
+<%k =   true%>
   <% @instruments.each do |i| %>
     <% if i.category == "String Instruments" %>
+     <% if(s == true)%>
+        <%=i.category%>
+        <%s = false%>
+     <%end%>
       <div class="card-product">
         <a href="<%= instrument_path(i) %>">
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
@@ -49,6 +60,10 @@
         </a>
       </div>
     <% elsif i.category == "Wind Instruments" %>
+    <% if(w== true)%>
+        <%=i.category%>
+        <%w = false%>
+     <%end%>
       <div class="card-product">
         <a href="<%= instrument_path(i) %>">
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
@@ -59,6 +74,10 @@
         </a>
       </div>
     <% elsif i.category == "Percussion Instruments" %>
+     <% if(pe== true)%>
+        <%=i.category%>
+        <%pe = false%>
+     <%end%>
       <div class="card-product">
         <a href="<%= instrument_path(i) %>">
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
@@ -69,6 +88,10 @@
         </a>
       </div>
     <% elsif i.category == "Keyboard Instruments" %>
+      <% if(k== true)%>
+        <%=i.category%>
+        <%k = false%>
+     <%end%>
       <div class="card-product">
         <a href="<%= instrument_path(i) %>">
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
