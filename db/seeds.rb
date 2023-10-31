@@ -1,53 +1,43 @@
 # db/seeds.rb
 
-# Instrument Categories and Names
-instrument_categories = {
-  'String Instruments' => ['Violin', 'Guitar', 'Electric Guitar', 'Bass Guitar', 'Harp'],
-  'Wind Instruments' => ['Flute', 'Saxophone', 'Trumpet', 'Clarinet', 'Oboe'],
-  'Percussion Instruments' => ['Drum Kit', 'Bongos', 'Xylophone', 'Djembe', 'Tambourine'],
-  'Keyboard Instruments' => ['Piano', 'Organ', 'Synthesizer', 'Electric Keyboard', 'Accordion']
-}
+# Common password for all users
+common_password = "password"
 
-# Create Users
-users = []
-10.times do |i|
-  users << User.create(email: "user#{i + 1}@example.com", password: 'password')
+# Seed Users with the common password
+10.times do
+  User.create!(
+    email: Faker::Internet.email,
+    password: common_password,
+    password_confirmation: common_password
+  )
 end
 
-# Create Instruments with Category and Name
-instruments = []
-instrument_categories.each do |category, names|
-  names.each do |name|
-    users.each do |user|
-      instruments << Instrument.create(
-        price: rand(30..99),
-        location: Faker::Address.city,
-        category: category,
-        name: name,
-        user: user
-      )
-    end
-  end
+# Seed Instruments
+10.times do
+  Instrument.create!(
+    price: Faker::Number.decimal(l_digits: 2),
+    location: Faker::Address.city,
+    user_id: User.pluck(:id).sample,
+    category: Faker::Lorem.word,
+    name: Faker::Lorem.word
+  )
 end
 
-# Create Reviews
-instruments.each do |instrument|
-  10.times do
-    Review.create(
-      comment: Faker::Lorem.sentence,
-      rating: rand(1.0..5.0).round(1),
-      instrument: instrument
-    )
-  end
+# Seed Bookings
+10.times do
+  Booking.create!(
+    starting_date: Faker::Date.between(from: Date.today, to: 1.year.from_now),
+    ending_date: Faker::Date.between(from: 1.day.from_now, to: 1.year.from_now),
+    user_id: User.pluck(:id).sample,
+    instrument_id: Instrument.pluck(:id).sample
+  )
 end
 
-# Create Bookings
-users.each do |user|
-  10.times do
-    Booking.create(
-      starting_date: Date.today + rand(1..30).days,
-      ending_date: Date.today + rand(31..60).days,
-      user: user
-    )
-  end
+# Seed Reviews
+10.times do
+  Review.create!(
+    comment: Faker::Lorem.sentence,
+    rating: Faker::Number.between(from: 1, to: 5),
+    instrument_id: Instrument.pluck(:id).sample
+  )
 end
