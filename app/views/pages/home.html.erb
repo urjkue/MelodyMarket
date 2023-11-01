@@ -1,12 +1,63 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path('Instruments/Saxophone/jens-thekkeveettil-dBWvUqBoOU8-unsplash (1).jpg') %>'); margin-top:-4rem;">
+</div><div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path('Instruments/Saxophone/jens-thekkeveettil-dBWvUqBoOU8-unsplash (1).jpg') %>'); margin-top:-4rem;">
   <div class="container">
     <h1>Rent your dream instrument. </h1>
-    <a class="btn btn-flat" id="btn_catalog"  href="/catalogue">Browse</a>
+    <a class="banner-button" href="/catalogue">Choose an instrument ></a>
   </div>
 </div>
 
-<div class=“popular-instruments”>
-  <h2 class=“secondary-title”> Popular instruments </h2>
+<%# // Popular instruments %>
+
+<div class="containter">
+  <div class=“instruments-categories”>
+    <h2 class=“secondary-title”> Popular instruments </h2>
+  </div>
+    <div class="parent">
+      <div class="div1" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path('Instruments/Saxophone/jens-thekkeveettil-dBWvUqBoOU8-unsplash (1).jpg') %>')">
+      </div>
+      <div class="div2">
+        <img class="popular-instruments-img" src="https://picsum.photos/230/300?random=1.jpg" alt="guitare" title="guitare">
+      </div>
+      <div class="div3">
+        <img class="popular-instruments-img" src="https://picsum.photos/230/300?random=1.jpg" alt="saxophone" title="saxophone">
+      </div>
+      <div class="div4">
+        <img class="popular-instruments-img" src="https://picsum.photos/230/300?random=1.jpg" alt="battery" title="battery">
+      </div>
+      <div class="div5">
+        <img class="popular-instruments-img" src="https://picsum.photos/230/300?random=1.jpg" alt="violin" title="violin">
+      </div>
+    </div>
+</div>
+
+<%# // Instruments categories %>
+
+<div class=“instruments-categories”>
+  <h2 class=“secondary-title”> Instruments categories </h2>
+  <div class="gallery-grid">
+    <figure class="gallery-frame">
+      <img class="gallery-img" src="https://picsum.photos/230/300?random=1.jpg" alt="symbol image" title="symbol image">
+    </figure>
+    <figure class="gallery-frame">
+      <img class="gallery-img" src="https://picsum.photos/230/300?random=2.jpg" alt="symbol image" title="symbol image">
+    </figure>
+    <figure class="gallery-frame">
+      <img class="gallery-img" src="https://picsum.photos/230/300?random=3.jpg" alt="symbol image" title="symbol image">
+    </figure>
+    <figure class="gallery-frame">
+      <img class="gallery-img" src="https://picsum.photos/230/300?random=4.jpg" alt="symbol image" title="symbol image">
+    </figure>
+  </div><!-- end:gallery-grid -->
+</div>
+
+<%# // Top rated instruments %>
+
+<div class=“toprated-instruments”>
+  <h2 class=“secondary-title”> Top rated instruments </h2>
+    <section>
+</div>
+
+
+<%#
   <div class="img-container">
     <div class="row">
       <div class="column">
@@ -32,12 +83,7 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
+ %>
 
 
 
@@ -61,14 +107,6 @@
       <div class="small4 foto"> <%= image_tag "Instruments/Piano/Piano1.jpg"%></div>
     </div>
 </div>
-
-
-
-
-
-
-
-
 
 
 

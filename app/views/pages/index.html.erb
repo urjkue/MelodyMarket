@@ -3,24 +3,25 @@
 
 
 
-<div class="catagloue-links-container">
+<div class="catalogue-links-container">
   <div class="single-link">
-    <%= link_to "Piano", "#" %>
+    <%= link_to "Piano", "#", class: "btn btn-outline-secondary" %>
   </div>
   <div class="single-link">
-    <%= link_to "Guitar", "#" %>
+    <%= link_to "Guitar", "#", class: "btn btn-outline-secondary" %>
   </div>
   <div class="single-link">
-    <%= link_to "Battery", "#" %>
+    <%= link_to "Battery", "#", class: "btn btn-outline-secondary" %>
   </div>
   <div class="single-link">
-    <%= link_to "Saxophone", "#" %>
+    <%= link_to "Saxophone", "#", class: "btn btn-outline-secondary" %>
   </div>
   <div class="single-link">
-    <%= link_to "Violin", "#" %>
+    <%= link_to "Violin", "#", class: "btn btn-outline-secondary" %>
   </div>
 </div>
 <%
+
 =begin%>
  <ul>
   <% @instrument.each do |i| %>
@@ -76,7 +77,7 @@
       </div>
     <% elsif i.category == "Percussion Instruments" %>
      <% if(pe== true)%>
-       <div class="secondary-title">
+       <div class="h2">
         <%=i.category%>
         </div>
         <%pe = false%>
@@ -92,7 +93,7 @@
       </div>
     <% elsif i.category == "Keyboard Instruments" %>
       <% if(k== true)%>
-        <div class="secondary-title">
+        <div class="h2">
         <%=i.category%>
         </div>
         <%k = false%>
@@ -102,7 +103,7 @@
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
           <div class="card-product-infos">
             <h2 class="keyboard-instruments"><%= i.name %></h2>
-            <div class="secondary-title">
+            <div class="h2">
         <%=i.category%>
         </div>
           </div>
