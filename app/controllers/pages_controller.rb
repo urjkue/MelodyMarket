@@ -27,5 +27,10 @@ class PagesController < ApplicationController
 
   def booking
     @user = User.find(params[:user_id])
+    @starting_date = Date.parse(params[:starting_date])
+    @ending_date = Date.parse(params[:ending_date])
+    @input_value = params[:input_value]
+    @instrument = Instrument.find(params[:instrument_id])
+    @number_of_days = (@ending_date - @starting_date).to_i
   end
 end

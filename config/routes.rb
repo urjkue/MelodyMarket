@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "instrument/:id", to: "pages#show",as:"instrument"
   get "/products/:category", to: "pages#category",as:"cateinstrument"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  get "/booking/:user_id/:instrument_id", to: "pages#booking", as: "booking"
+  get "/booking", to: "pages#booking", as: "booking"
   # Defines the root path route ("/")
   # root "articles#index"
 end

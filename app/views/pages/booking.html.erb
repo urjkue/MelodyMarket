@@ -1,1 +1,27 @@
-<%=@user.email%>
+<h1>BOOKING</h1>
+
+<hr>
+
+
+<div>
+<h2>
+<%= @user.email%>
+
+<p>
+
+Books >>>>> <%= @instrument.name%>
+
+</p>
+<p>
+
+for >>>>> <%= @number_of_days%> days
+
+</p>
+
+<p>
+total >>>>> <%= @number_of_days * @instrument.price%> <p> for <%=@instrument.price%> per day</p>
+</p>
+</h2>
+</div>
+
+<hr>
