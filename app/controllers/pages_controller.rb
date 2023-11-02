@@ -18,4 +18,7 @@ class PagesController < ApplicationController
   end
   def instrument
   end
+
+  def booking
+  end
 end
