@@ -22,6 +22,29 @@
   font-weight: bold;
 }
 
+.parent {
+  width: 100vw;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  .child {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    gap: 0.75rem;
+    .child-half {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+    }
+    .child-full {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
 .banner p {
   font-size: 20px;
   color: white;
@@ -29,35 +52,18 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-
 .banner-button {
   margin-top: 1rem;
   padding: 1rem;
   display: inline-block;
   background-color: #B3855A;
   border-radius: 20px;
-
-  a {
-    text-decoration: none;
-    color: snow;
-  }
+  text-decoration: none;
+  color: snow;
 }
 
 /////////// Popular instruments
 
-.parent {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  }
-
-  .div1 { grid-area: 1 / 1 / 2 / 2; }
-  .div2 { grid-area: 2 / 1 / 3 / 2; }
-  .div3 { grid-area: 1 / 2 / 3 / 3; }
-  .div4 { grid-area: 1 / 3 / 2 / 4; }
-  .div5 { grid-area: 2 / 3 / 3 / 4; }
 
 
 /////////// Instruments categories
