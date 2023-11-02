@@ -1,10 +1,40 @@
 <h2><%= @ins.name %></h2>
 
-<h3>Reviews for <%= @ins.name %></h3>
+
+<h2>Reviews for <%= @ins.name %></h2>
+
+
+<h2 id="description">
+Description
+<p>
+Amazing Instrument!!!!!!!
+</p>
+<a  id="booking_link" href="<%= booking_path(@user_id,@id)%>"> book instrument </a>
+
+</h2>
+
+<hr>
+
+<h2>
+
 <ul>
   <% @reviews.each do |review| %>
-    <li><%= review.comment %></li> <!-- Assuming 'comment' is the attribute where review text is stored -->
-    <li>Rating: <%= review.rating %></li> <!-- Assuming 'rating' is the attribute where review rating is stored -->
+    <li><%= review.comment %></li>
+    <li>Rating: <%= review.rating %></li>
+    <h2 id="person"> from: <%= @email%></h2>
   <% end %>
 </ul>
-<a href="<%= booking_path %>"> book instrument </a>
+
+</h2>
+
+
+<hr>
+
+<h1>
+map
+</h1>
+
+<hr>
+<h2>
+other  available instrument
+</h2>
