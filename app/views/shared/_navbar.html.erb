@@ -12,10 +12,13 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Catalogue",root_path, class: "nav-link" %>
+            <%= link_to "Catalogue",catalogue_path, class: "nav-link" %>
           </li>
           <li class="nav-item" id="mes">
-            <%= link_to "About us", "#", class: "nav-link" %>
+            <%= link_to "About us", about_path, class: "nav-link" %>
+          </li>
+           <li class="nav-item" id="mes">
+            <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://static.wikia.nocookie.net/bttf/images/2/2c/Michael_Jackson.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
