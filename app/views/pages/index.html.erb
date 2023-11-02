@@ -3,7 +3,12 @@
 
 
 
-<div class="catalogue-links-container">
+
+<div class="card-category" >
+  Explore instruments
+</div>
+
+<div class="catagloue-links-container">
   <div class="single-link">
     <%= link_to "Piano", "#", class: "btn btn-outline-secondary" %>
   </div>
@@ -20,95 +25,36 @@
     <%= link_to "Violin", "#", class: "btn btn-outline-secondary" %>
   </div>
 </div>
-<%
+<div>
+<h2>String Instruments</h2>
+  <% @instruments.where(category:"String Instruments").each do |i| %>
+  <%= render "shared/instrument_card", i: i %>
+<% end %>
+</div>
 
-=begin%>
- <ul>
-  <% @instrument.each do |i| %>
-   <h1 clas="String Instruments"> <%
-    if(.category =="String Instruments") {
-      i.name
-    }
-    %></h1>
+<div>
+<h2>String Instruments</h2>
+  <% @instruments.where(category:"String Instruments").each do |i| %>
+  <%= render "shared/instrument_card", i: i %>
+<% end %>
+</div>
 
+<div>
+<h2>Wind Instruments</h2>
+  <% @instruments.where(category:"Wind Instruments").each do |i| %>
+  <%= render "shared/instrument_card", i: i %>
+<% end %>
+</div>
 
-  <% end %>
-</ul>
-<%
-=end%>
+<div>
+<h2>Percussion Instruments</h2>
+  <% @instruments.where(category:"Percussion Instruments").each do |i| %>
+  <%= render "shared/instrument_card", i: i %>
+<% end %>
+</div>
 
-<ul>
-<%s =   true%>
-<%w =   true%>
-<%pe =   true%>
-<%k =   true%>
-  <% @instruments.each do |i| %>
-    <% if i.category == "String Instruments" %>
-     <% if(s == true)%>
-     <div class="secondary-title">
-        <%=i.category%>
-        </div>
-        <%s = false%>
-     <%end%>
-      <div class="card-product">
-        <a href="<%= instrument_path(i) %>">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-          <div class="card-product-infos">
-            <h2 class="string-instruments"><%= i.name %></h2>
-            <p><%= i.category %></p>
-          </div>
-        </a>
-      </div>
-    <% elsif i.category == "Wind Instruments" %>
-    <% if(w== true)%>
-        <div class="secondary-title">
-        <%=i.category%>
-        </div>
-        <%w = false%>
-     <%end%>
-      <div class="card-product">
-        <a href="<%= instrument_path(i) %>">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-          <div class="card-product-infos">
-            <h2 class="wind-instruments"><%= i.name %></h2>
-            <p><%= i.category %></p>
-          </div>
-        </a>
-      </div>
-    <% elsif i.category == "Percussion Instruments" %>
-     <% if(pe== true)%>
-       <div class="h2">
-        <%=i.category%>
-        </div>
-        <%pe = false%>
-     <%end%>
-      <div class="card-product">
-        <a href="<%= instrument_path(i) %>">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-          <div class="card-product-infos">
-            <h2 class="percussion-instruments"><%= i.name %></h2>
-            <p><%= i.category %></p>
-          </div>
-        </a>
-      </div>
-    <% elsif i.category == "Keyboard Instruments" %>
-      <% if(k== true)%>
-        <div class="h2">
-        <%=i.category%>
-        </div>
-        <%k = false%>
-     <%end%>
-      <div class="card-product">
-        <a href="<%= instrument_path(i) %>">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-          <div class="card-product-infos">
-            <h2 class="keyboard-instruments"><%= i.name %></h2>
-            <div class="h2">
-        <%=i.category%>
-        </div>
-          </div>
-        </a>
-      </div>
-    <% end %>
-  <% end %>
-</ul>
+<h2>Keyboard Instruments</h2>
+  <% @instruments.where(category:"Keyboard Instruments").each do |i| %>
+  <%= render "shared/instrument_card", i: i %>
+<% end %>
+</div>
