@@ -1,1 +1,34 @@
-<h1>do me plz</h1>
+<h1>BOOKING</h1>
+
+<hr>
+
+<div>
+  <h2>
+    <%= @user.email %>
+
+    <p>
+      Books >>>>> <%= @instrument.name %>
+    </p>
+    <p>
+      for >>>>> <%= @number_of_days %> days
+    </p>
+    <p>
+      total >>>>> <%= @number_of_days * @instrument.price %>
+      <p> for <%= @instrument.price %> per day</p>
+    </p>
+  </h2>
+
+  <%= form_tag(booking_path, method: :post) do %>
+    <%= hidden_field_tag :user_id, @user.id %>
+    <%= hidden_field_tag :instrument_id, @instrument.id %>
+    <%= hidden_field_tag :starting_date, @starting_date %>
+    <%= hidden_field_tag :ending_date, @ending_date %>
+
+    <%= check_box_tag :confirmed, true %>
+    <%= label_tag :confirmed, 'I confirm my booking details' %>
+
+    <%= submit_tag 'Confirm Booking' %>
+  <% end %>
+</div>
+
+<hr>

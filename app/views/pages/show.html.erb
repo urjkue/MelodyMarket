@@ -1,10 +1,36 @@
 <h2><%= @ins.name %></h2>
 
-<h3>Reviews for <%= @ins.name %></h3>
+<h2>Price: <%= @ins.price %> /day</h2>
+
+<h2>Reviews for <%= @ins.name %></h2>
+
 <ul>
   <% @reviews.each do |review| %>
-    <li><%= review.comment %></li> <!-- Assuming 'comment' is the attribute where review text is stored -->
-    <li>Rating: <%= review.rating %></li> <!-- Assuming 'rating' is the attribute where review rating is stored -->
+    <li><%= review.comment %></li>
+    <li>Rating: <%= review.rating %></li>
+    <h2 id="person">from: <%= review.user.email %></h2>
   <% end %>
 </ul>
-<a href="<%= booking_path %>"> book instrument </a>
+
+<h2 id="description">
+  Description
+  <p>
+    Amazing Instrument!!!!!!!
+  </p>
+
+  <%= form_tag("/booking", method: "get") do %>
+    <%= hidden_field_tag(:user_id, current_user.id) %>
+    <%= hidden_field_tag(:instrument_id, @ins.id) %>
+    <%= date_field_tag(:starting_date, params[:starting_date], placeholder: "Starting Date") %>
+    <%= date_field_tag(:ending_date, params[:ending_date], placeholder: "Ending Date") %>
+    <%= submit_tag("Submit") %>
+  <% end %>
+</h2>
+
+<hr>
+
+<h1>Map</h1>
+
+<hr>
+
+<h2>Other Available Instruments</h2>

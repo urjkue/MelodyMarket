@@ -1,0 +1,22 @@
+<h1>My Bookings</h1>
+<ul>
+  <% @bookings.each do |booking| %>
+  <h2>
+    <li>
+      Booking ID: <%= booking.id %>,
+      Instrument Name: <%= booking.instrument.name %>,
+      Starting Date: <%= booking.starting_date %>,
+      Ending Date: <%= booking.ending_date %>
+    </li>
+    </h2>
+  <% end %>
+</ul>
+
+<h1>My Reviews</h1>
+<ul>
+  <% @reviews.each do |review| %>
+  <h2>
+    <li>Review ID: <%= review.id %>, Rating: <%= review.rating %>, Comment: <%= review.comment %></li>
+    </h2>
+  <% end %>
+</ul>
