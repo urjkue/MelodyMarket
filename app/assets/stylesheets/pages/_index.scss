@@ -2,7 +2,7 @@
 @import "home";
 
 .card-category {
-  background-size: cover;
+
   background-position: center;
   height: 180px;
   display: flex;
@@ -20,7 +20,6 @@
 
 .string-instruments{
 color: red;
-
 }
 
 .card-product {
@@ -62,16 +61,16 @@ color: red;
   margin-bottom: 1rem;
   display: flex;
   gap: 1rem;
+  text-decoration: none;
+
 }
 
-.catalogue-links-container > .single-link {
-  padding: .3rem .8rem;
-  border: 1px solid snow;
-  border-color: snow !important;
-  border-radius: 1.5rem;
-}
 
 .single-link > a {
   text-decoration: none;
   color: snow;
+  padding: .3rem .8rem;
+  border: 1px solid snow;
+  border-color: snow !important;
+  border-radius: 1.5rem;
 }
