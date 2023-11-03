@@ -32,15 +32,37 @@
     flex-direction: column;
     width: 30vw;
     gap: 0.75rem;
+    position: relative;
+    .button-rel {
+    position: absolute;
+    top : 10px;
+    left: 20px;
+    background-color: rgba(52, 51, 51, 0);
+    // box-shadow: snow;
+    color: white;
+    border-radius: 16px;
+    :hover { background-color: white;
+    }
+    }
     .child-half {
       width: 100%;
-      height: 50%;
+      height: 100%;
       object-fit: cover;
+      .button-rel {
+        position: absolute;
+        top : 10px;
+        left: 10px
+        }
     }
     .child-full {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      .button-rel {
+        position: absolute;
+        top : 10px;
+        left: 10px
+        }
     }
   }
 }
@@ -96,13 +118,17 @@ p {
 }
 
 /* The Picture Frame */
-// .gallery-frame {
-//   padding: 1rem;
-//   font-size: 1.2rem;
-//   text-align: center;
-//   background-color: #333;
-//   color: #d9d9d9;
-// }
+.gallery-frame {
+  img {
+    max-width: 230px;
+    max-height: 300px;
+  }
+  // padding: 1rem;
+  // font-size: 1.2rem;
+  // text-align: center;
+  // background-color: #333;
+  // color: #d9d9d9;
+}
 
 // /* The Images */
 // .gallery-img {
