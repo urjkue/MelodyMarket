@@ -1,32 +1,30 @@
 </div><div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path('instruments/Saxophone/jens-thekkeveettil-dBWvUqBoOU8-unsplash (1).jpg') %>'); margin-top:-4rem;">
   <div class="container">
-    <h1>Rent your dream instrument. </h1>
-    <a class="banner-button" href="/catalogue">Choose an instrument </a>
+    <h1>Rent your dream <br> instrument. </h1>
+    <a class="banner-button" href="/catalogue">Choose an instrument ></a>
   </div>
 </div>
 
 <%# // Popular instruments %>
 
-<div class="containter">
+<div class="">
   <div class=“instruments-categories”>
     <h2 class=“secondary-title”> Popular instruments </h2>
   </div>
-    <div class="parent">
-      <div class="div1" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path('instruments/Saxophone/jens-thekkeveettil-dBWvUqBoOU8-unsplash (1).jpg') %>')">
-      </div>
-      <div class="div2">
-        <img class="popular-instruments-img" src="https://picsum.photos/230/300?random=1.jpg" alt="saxophone" title="saxophone">
-      </div>
-      <div class="div3">
-        <img class="popular-instruments-img" src="https://picsum.photos/230/300?random=1.jpg" alt="saxophone" title="saxophone">
-      </div>
-      <div class="div4">
-        <img class="popular-instruments-img" src="https://picsum.photos/230/300?random=1.jpg" alt="battery" title="battery">
-      </div>
-      <div class="div5">
-        <img class="popular-instruments-img" src="https://picsum.photos/230/300?random=1.jpg" alt="violin" title="violin">
-      </div>
+  <div class="parent">
+    <div class="child">
+      <%= image_tag 'instruments/Saxophone/jens-thekkeveettil-dBWvUqBoOU8-unsplash (1).jpg', class: "child-half" %>
+      <%= image_tag 'instruments/Saxophone/jens-thekkeveettil-dBWvUqBoOU8-unsplash (1).jpg', class: "child-half" %>
     </div>
+    <div class="child">
+      <%= image_tag 'instruments/Saxophone/jens-thekkeveettil-dBWvUqBoOU8-unsplash (1).jpg', class: "child-full" %>
+    </div>
+    <div class="child">
+      <%= image_tag 'instruments/Saxophone/jens-thekkeveettil-dBWvUqBoOU8-unsplash (1).jpg', class: "child-half" %>
+      <%= image_tag 'instruments/Saxophone/jens-thekkeveettil-dBWvUqBoOU8-unsplash (1).jpg', class: "child-half" %>
+    </div>
+
+  </div>
 </div>
 
 <%# // Instruments categories %>
