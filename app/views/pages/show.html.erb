@@ -2,7 +2,9 @@
     <div class="ins">
       <h2><%= @ins.name %></h2>
 
+
       <h2>Price: <%= @ins.price %> /day</h2>
+
   </div>
 
   <div class="review">
@@ -47,7 +49,9 @@
     <%= hidden_field_tag(:usr_id , @current_user.id)%>
     <%= submit_tag("Submit") %>
   <% end %>
+  <% end %>
 
+</div>
 <hr>
 
   <div class="class">
