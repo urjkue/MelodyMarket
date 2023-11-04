@@ -22,7 +22,16 @@
 <div class="string_card">
 <h2>String Instruments</h2>
   <% @instruments.where(category:"String Instruments").each do |i| %>
-  <%= render "shared/instrument_card", i: i %>
+ <div class="card-product">
+        <a href="<%= instrument_path(i) %>">
+          <%= image_tag 'Instruments/Piano/Piano1.jpg'%>
+          <div class="card-product-infos">
+            <h2 class="string-instruments"><%= i.name %></h2>
+
+            <p>per/<%= i.price %>day</p>
+          </div>
+        </a>
+      </div>
 <% end %>
 </div>
 
@@ -31,20 +40,20 @@
 <div class="wind_card">
 <h2>Wind Instruments</h2>
   <% @instruments.where(category:"Wind Instruments").each do |i| %>
-  <%= render "shared/instrument_card", i: i %>
+  <%= render "shared/instrument_card1", i: i %>
 <% end %>
 </div>
 
 <div class="percussion_card">
 <h2>Percussion Instruments</h2>
   <% @instruments.where(category:"Percussion Instruments").each do |i| %>
-  <%= render "shared/instrument_card", i: i %>
+  <%= render "shared/instrument_card2", i: i %>
 <% end %>
 </div>
 
 <div class="keyboard_card">
 <h2>Keyboard Instruments</h2>
   <% @instruments.where(category:"Keyboard Instruments").each do |i| %>
-  <%= render "shared/instrument_card", i: i %>
+  <%= render "shared/instrument_card3", i: i %>
 <% end %>
 </div>
