@@ -8,8 +8,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get "/booking", to: "pages#booking", as: "booking"
   get "/dashboard", to: "pages#dashboard", as: "dashboard"
-  get '/instruments/:id/add-review', to: 'pages#new_review', as: 'new_review'
-  post '/instruments/:id/add-review', to: 'pages#create_review', as: 'create_review'
+  get '/rev', to: 'pages#new_review', as: 'review'
   # Defines the root path route ("/")
   # root "articles#index"
 end

@@ -17,11 +17,9 @@ class PagesController < ApplicationController
   #   @email = user.email
 
   #   # Check if the user has booked this instrument
-  #   @booking = Booking.find_by(user_id: @user_id, instrument_id: @ins.id)
-
-  #   if @booking.present?
-  #     # User has booked the instrument, fetch reviews
+    @booking = Booking.find_by(user_id: @user_id, instrument_id: @ins.id)
     @reviews = Review.where(instrument_id: @ins.id).order(rating: :desc).limit(2)
+  #     # User has booked the instrument, fetch reviews
   #   else
   #     # User has not booked the instrument, do something (redirect, show a message, etc.)
   #     flash[:alert] = "You must book this instrument to write a review and rate it."
@@ -67,32 +65,22 @@ class PagesController < ApplicationController
   end
 
   def new_review
-    @instrument = Instrument.find(params[:id])
-    @booking = Booking.find_by(user_id: current_user.id, instrument_id: @instrument.id)
-    @review = Review.new
-  end
-
-  def create_review
-    @instrument = Instrument.find(params[:id])
-    @booking = Booking.find_by(user_id: current_user.id, instrument_id: @instrument.id)
-
-    if @booking.present?
-      @review = Review.new(review_params.merge(user_id: current_user.id, instrument_id: @instrument.id))
-
-      if @review.save
-        redirect_to instrument_path(@instrument), notice: 'Review added successfully.'
-      else
-        render :new_review, alert: 'Failed to add review. Please try again.'
-      end
+    @a = params[:comment]
+    @rate = params[:rating]
+    @ins_idd = params[:ins_id]
+    @usr = params[:usr_id]
+    @review = Review.new(
+      comment: @a,
+      rating: @rate,
+      instrument_id: @ins_idd,
+      user_id: @usr
+    )
+    if @review.save
+      redirect_to dashboard_path, notice: 'review was successfully created.'
     else
-      redirect_to instrument_path(@instrument), alert: 'You must book this instrument to write a review.'
+      render :review
     end
-  end
 
-  private
-
-  def review_params
-    params.require(:review).permit(:comment, :rating)
   end
 
 end

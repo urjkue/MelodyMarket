@@ -37,10 +37,18 @@
   <div class="class">
     <hr>
 
-    <h1>Map</h1>
 
-    <hr>
-  </div>
+<% if @booking.present?%>
+<hr>
+  <%= form_tag("/rev", method: "get") do %>
+    <%= text_field_tag(:comment, params[:comment], placeholder:"comment") %>
+    <%= text_field_tag(:rating , params[:rating], placeholder: "rating[1 to 5]") %>
+    <%= hidden_field_tag(:ins_id, @ins.id)%>
+    <%= hidden_field_tag(:usr_id , @current_user.id)%>
+    <%= submit_tag("Submit") %>
+  <% end %>
+
+<hr>
 
   <div class="class">
     <h2>Other Available Instruments</h2>
