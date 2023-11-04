@@ -13,20 +13,20 @@ class PagesController < ApplicationController
   def show
     @ins = Instrument.find(params[:id])
     @user_id = current_user.id
-    user = User.find(@user_id)
-    @email = user.email
+  #   user = User.find(@user_id)
+  #   @email = user.email
 
-    # Check if the user has booked this instrument
-    @booking = Booking.find_by(user_id: @user_id, instrument_id: @ins.id)
+  #   # Check if the user has booked this instrument
+  #   @booking = Booking.find_by(user_id: @user_id, instrument_id: @ins.id)
 
-    if @booking.present?
-      # User has booked the instrument, fetch reviews
-      @reviews = Review.where(instrument_id: @ins.id).order(rating: :desc).limit(2)
-    else
-      # User has not booked the instrument, do something (redirect, show a message, etc.)
-      flash[:alert] = "You must book this instrument to write a review and rate it."
-      redirect_to root_path # Redirect to home or another appropriate path
-    end
+  #   if @booking.present?
+  #     # User has booked the instrument, fetch reviews
+    @reviews = Review.where(instrument_id: @ins.id).order(rating: :desc).limit(2)
+  #   else
+  #     # User has not booked the instrument, do something (redirect, show a message, etc.)
+  #     flash[:alert] = "You must book this instrument to write a review and rate it."
+  #     redirect_to root_path # Redirect to home or another appropriate path
+  #   end
   end
   def category
     @instru = Instrument.where(category: params[:category])
