@@ -31,20 +31,20 @@
 <div class="wind_card">
 <h2>Wind Instruments</h2>
   <% @instruments.where(category:"Wind Instruments").each do |i| %>
-  <%= render "shared/instrument_card", i: i %>
+  <%= render "shared/instrument_card1", i: i %>
 <% end %>
 </div>
 
 <div class="percussion_card">
 <h2>Percussion Instruments</h2>
   <% @instruments.where(category:"Percussion Instruments").each do |i| %>
-  <%= render "shared/instrument_card", i: i %>
+  <%= render "shared/instrument_card2", i: i %>
 <% end %>
 </div>
 
 <div class="keyboard_card">
 <h2>Keyboard Instruments</h2>
   <% @instruments.where(category:"Keyboard Instruments").each do |i| %>
-  <%= render "shared/instrument_card", i: i %>
+  <%= render "shared/instrument_card3", i: i %>
 <% end %>
 </div>
