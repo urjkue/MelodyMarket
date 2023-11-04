@@ -22,16 +22,7 @@
 <div class="string_card">
 <h2>String Instruments</h2>
   <% @instruments.where(category:"String Instruments").each do |i| %>
- <div class="card-product">
-        <a href="<%= instrument_path(i) %>">
-          <%= image_tag 'Instruments/Piano/Piano1.jpg'%>
-          <div class="card-product-infos">
-            <h2 class="string-instruments"><%= i.name %></h2>
-
-            <p>per/<%= i.price %>day</p>
-          </div>
-        </a>
-      </div>
+  <%= render "shared/instrument_card", i: i %>
 <% end %>
 </div>
 
