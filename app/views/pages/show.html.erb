@@ -1,11 +1,24 @@
 <div class="show-home">
     <div class="ins">
+
       <h2><%= @ins.name %></h2>
 
 
       <h2>Price: <%= @ins.price %> /day</h2>
 
+      <h2 id="description">
+      Description
+
+      <p>
+        Amazing Instrument!!!!!!!
+      </p>
+
   </div>
+      <hr>
+
+    <hr>
+
+
 
   <div class="review">
     <h2>Reviews for <%= @ins.name %></h2>
@@ -19,29 +32,32 @@
     <% end %>
   </div>
 
-  <div class="class">
-    <h2 id="description">
-      Description
-      <p>
-        Amazing Instrument!!!!!!!
-      </p>
+      <hr>
+          <hr>
 
+
+
+  <div class="book">
       <%= form_tag("/booking", method: "get") do %>
         <%= hidden_field_tag(:user_id, current_user.id) %>
         <%= hidden_field_tag(:instrument_id, @ins.id) %>
-        <%= date_field_tag(:starting_date, params[:starting_date], placeholder: "Starting Date") %>
-        <%= date_field_tag(:ending_date, params[:ending_date], placeholder: "Ending Date") %>
+        <%= date_field_tag(:starting_date, params[:starting_date], placeholder: "Starting Date",style:"width:300px;height:30px;") %>
+        <p>
+        </p>
+        <%= date_field_tag(:ending_date, params[:ending_date], placeholder: "Ending Date",style:"width:300px;height:30px;") %>
+        <p>
+        </p>
         <%= submit_tag("Submit") %>
       <% end %>
     </h2>
   </div>
 
-  <div class="class">
     <hr>
 
 
 <% if @booking.present?%>
 <hr>
+<div class="rev">
   <%= form_tag("/rev", method: "get") do %>
     <%= text_field_tag(:comment, params[:comment], placeholder:"comment") %>
     <%= text_field_tag(:rating , params[:rating], placeholder: "rating[1 to 5]") %>
@@ -54,7 +70,11 @@
 </div>
 <hr>
 
-  <div class="class">
+  <%
+=begin%>
+ <div class="class">
     <h2>Other Available Instruments</h2>
   </div>
 </div>
+<%
+=end%>
